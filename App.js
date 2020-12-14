@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View, ActivityIndicator } from "react-native";
 
 export default function App() {
   const [loading, setloading] = useState(true);
 
  return (
+  
    <View style={styles.container}>
      <Text style={styles.title}>Bus arrival time:</Text>
      <Text style={styles.arrivalTime}>
-       {loading? "Loading..." : "Loaded"}
+       {loading ? <ActivityIndicator size="large" color="#0000ff" /> : "Loaded"}
        </Text>
      <TouchableOpacity style={styles.button}>
        <Text style={styles.buttonText}>Refresh!</Text>
