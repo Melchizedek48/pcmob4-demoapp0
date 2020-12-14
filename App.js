@@ -12,7 +12,12 @@ export default function App() {
       return response.json();
   })
     .then((responseDATA) => {
-      console.log(responseDATA);
+      // console.log(responseDATA);
+      const myBusData = responseData.services.filter (
+        (item) => item.no === "63"
+      )[0];
+      console.log("My Bus:");
+      console.log(myBusData);
   });
   }
 
